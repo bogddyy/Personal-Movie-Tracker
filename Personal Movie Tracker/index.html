@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Personal Movie Tracker</h1>
+      <p>Organizeaza-ti filmele favorite intr-un singur loc!</p>
+    </header>
+    <main>
+      <div class="form-container">
+        <form id="movieForm">
+          <input type="text" id="movieName" placeholder="Nume film" required />
+          <input
+            type="text"
+            id="movieDescription"
+            placeholder="Descriere film"
+            required
+          />
+          <input
+            type="url"
+            id="movieImage"
+            placeholder="URL imagine"
+            required
+          />
+          <input type="number" id="movieYear" placeholder="An" required />
+          <input
+            type="number"
+            id="movieRating"
+            placeholder="Rating"
+            min="1"
+            max="10"
+            required
+          />
+          <button type="submit">Adauga film</button>
+        </form>
+        <form id="movieSearchForm">
+          <input
+            type="text"
+            id="movieSearchName"
+            placeholder="Cauta film"
+            required
+          />
+          <button type="submit">Cauta film</button>
+        </form>
+
+        <button id="toggleView">Schimba modul de afisare</button>
+      </div>
+      <div class="movies-container">
+        <table id="moviesTable">
+          <thead>
+            <tr>
+              <th>Nume</th>
+              <th>Descriere</th>
+              <th>Imagine</th>
+              <th>An</th>
+              <th>Rating</th>
+              <th>Data adaugarii</th>
+            </tr>
+          </thead>
+          <tbody id="moviesList"></tbody>
+        </table>
+        <ul id="moviesListUl"></ul>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
